@@ -3,6 +3,7 @@ import api.ShopAPI;
 import data.Database;
 import data.financial.Purchase;
 import data.shop.Customer;
+import data.shop.Seller;
 import menus.CustomerMenu;
 import menus.MainMenu;
 import menus.Menu2;
@@ -18,6 +19,13 @@ public class Shop implements ShopAPI {
         screen = new CustomerMenu( new Menu.Quit(),this, new Customer());
     }
     public void makeTransaction(Customer customer, Purchase purchase){}
+
+    // implement new methods from ShopAPI
+    public void addSeller(Seller seller) {}
+    public void addCustomer(Customer customer) {}
+    public Seller matchSeller() {return null;}
+    public Customer matchCustomer() {return null;}
+
     public void run(){
         do {
             screen.draw();
